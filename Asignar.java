@@ -1,12 +1,14 @@
 package personas;
 
 public class Asignar extends persona{
-		
+	
+	private static int stackSize;
+	private int nombres_1;
+	
+	
 	
 	public Asignar () {
-		super (nombre, nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, nombre7, nombre8,nombre9,atributo,
-				atributo_2,atributo_3,atributo_4);
-		this.atributo=atributo;
+		super (nombre, nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, nombre7, nombre8,nombre9);
 	}
 //nombres
 	public String get_name() {
@@ -42,23 +44,49 @@ public class Asignar extends persona{
 		return nombre9;
 	}
 	
-	public void set_atributo(String atributo) {
-		this.atributo = atributo;
-		}
-
+	//atributos
 	
-	public String get_atributo () { 
-    	return atributo; }
-    
-    public String get_atributo2 () {
-    	return atributo_2; }
-    
-    public String get_atributo3 () { 
-    	return atributo_3;}	
-    
-    public String get_atributo4 () { 
-    	return atributo_4;}
-
+	
+	//getters de los atributos
+	public boolean get_bizco() {
+        return bizco;
+    }
+	
+	public boolean get_pelon() {
+        return pelon;
+    }
+	
+	public boolean get_brazos() {
+        return brazos;
+    }
+	
+	public boolean get_fuerte() {
+        return fuerte;
+    }
+	
+	public boolean get_alopecia() {
+        return alopecia;
+    }
+	
+	public boolean get_otaku() {
+        return otaku;
+    }
+	
+	public boolean get_inteligente() {
+        return inteligente;
+    }
+	
+	public boolean get_loquito() {
+        return loquito;
+    }
+	
+	public boolean get_pitufo() {
+        return pitufo;
+    }
+	
+	public boolean get_gym() {
+        return gym;
+    }
 	
 	
 }

@@ -19,53 +19,35 @@ import java.util.Random;
 		protected static String nombre8;
 		protected static String nombre9;
 		
+		protected static boolean bizco;
+		protected static boolean pelon;
+		protected static boolean brazos;
+		protected static boolean fuerte;
+		protected static boolean alopecia;
+		protected static boolean otaku;
+		protected static boolean inteligente;
+		protected static boolean loquito;
+		protected static boolean pitufo;
+		protected static boolean gym;
+	
 		
 		
 		private static final String[] nombres= { "Rodolfo", "Andrea", "Luis", "Karen", "Betty la fea", "David",
 				"Milaneso", "Eduardo", "Sandalio", "Monica"};
-		
-		private static final String[] atributos1= { "bizco", "pelon", "brazos", "fuerte"};
-		
-		private static final String[] atributos2= { "pelon", "alopecia", "inteligente","otaku"};
-		
-		private static final String[] atributos3= { "bizco", "otaku", "gym", "Karen"};
-		
-		private static final String[] atributos4= { "brazos", "inteligente", "alopecia", "gym"};
-		
-		protected static String atributo;
-		protected static String atributo_2;
-		protected static String atributo_3;
-		protected static String atributo_4;
-		Random numrand = new Random();
-
-
-		
+	
 		
 		private static final List<String> nombresAleatorios = new ArrayList<String>();
 		
+		 static {
+		        for (String nombre : nombres) {
+		            nombresAleatorios.add(nombre);
+		        }
+		        Collections.shuffle(nombresAleatorios, new Random());
+		    
+		    }
+		
 		public persona(String nombre, String nombre1, String nombre2, String nombre3, String nombre4, String nombre5
-				, String nombre6, String nombre7, String nombre8, String nombre9, String atributo, String atributo_2, String atributo_3, String atributo_4) {
-			
-			int rando_num = numrand.nextInt(4);
-			int top;
-			top = rando_num;
-			atributo = atributos1[top];
-			
-			int rando_num2 = numrand.nextInt(atributos2.length);
-			int top2;
-			top2 = rando_num2;
-			atributo_2= atributos2[top2];
-			
-			int rando_num3 = numrand.nextInt(atributos3.length);
-			int top3;
-			top3 = rando_num3;
-			atributo_3 = atributos3[top3];
-			
-			int rando_num4 = numrand.nextInt(atributos4.length);
-			int top4;
-			top4 = rando_num4 ;
-			atributo_4 = atributos4[top4];
-
+				, String nombre6, String nombre7, String nombre8, String nombre9) {
 			
 			//Asignar los nombres a sus variables
 			this.nombre=nombresAleatorios.remove(0);
@@ -79,15 +61,19 @@ import java.util.Random;
 			this.nombre8=nombresAleatorios.remove(0);
 			this.nombre9=nombresAleatorios.remove(0);
 			
+			
+			this.bizco= new Random().nextBoolean();
+			this.pelon= new Random().nextBoolean();
+			this.brazos= new Random().nextBoolean();
+			this.fuerte= new Random().nextBoolean();
+			this.alopecia= new Random().nextBoolean();
+			this.otaku= new Random().nextBoolean();
+			this.inteligente= new Random().nextBoolean();
+			this.loquito= new Random().nextBoolean();
+			this.pitufo= new Random().nextBoolean();
+			this.gym= new Random().nextBoolean();
 		}
-		static {
-	        for (String nombre : nombres) {
-	            nombresAleatorios.add(nombre);
-	        }
-	        Collections.shuffle(nombresAleatorios, new Random());
-	    
-	    }
-	
+		
 		
 		
 	}
