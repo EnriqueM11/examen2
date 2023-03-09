@@ -17,16 +17,7 @@ public class AdivinaQuien {
        for (int i = 0; i < 10; i++) {
            persona[i] = new Persona() {};
        }
-       //contadores de los atributos
-       int espada = 0;
-       int millonario = 0;
-       int mamado = 0;
-       int Feo = 0;
-       int miedoCucarachas = 0;
-       int estaCansado = 0;
-       int estaEnfermo = 0;
-       int estaTriste = 0;
-       int estaFeliz = 0;
+ 
        System.out.println("JUEGO ADIVINA QUIEN?");
 
        List<String> caracteristicasImportantes = Arrays.asList("Es bizco", "Es pelon", "Tiene brazos", 
@@ -39,63 +30,63 @@ public class AdivinaQuien {
                switch (caracteristica) {
                    case "Es bizco":
                        if (personas.getbizco()) {
-                           espada++;
+                       
                            System.out.print("Es bizco, ");
                            contador++;
                        }
                        break;
                    case "Es pelon":
                        if (personas.getpelon() ) {
-                           millonario++;
+                          
                            System.out.print("Es pelon, ");
                            contador++;
                        }
                        break;
                    case "Tiene brazos":
                        if (personas.getbrazos()) {
-                           mamado++;
+                         
                            System.out.print("Tiene brazos, ");
                            contador++;
                        }
                        break;
                    case "Está Feo":
            if (personas.getEstaFeo()) {
-               Feo++;
+               
                System.out.print("Está Feo, ");
                contador++;
            }
            break;
                    case "Está Fuerte":
            if (personas.getfuerte()) {
-               miedoCucarachas++;
+               
                System.out.print("Está Fuerte, ");
                contador++;
            }
            break;
                    case "Esta cansado":
            if (personas.getEstaCansado()) {
-               estaCansado++;
+           
                System.out.print("Esta cansado, ");
                contador++;
            }
            break;
                    case "Está Enfermo":
            if (personas.getEstaEnfermo()) {
-               estaEnfermo++;
+            
                System.out.print("Está Enfermo, ");
                contador++;
            }
            break;
                    case "Está Triste":
            if (personas.getEstaTriste()) {
-               estaTriste++;
+               
                System.out.print("Está Triste, ");
                contador++;
            }
            break;
                    case "Está Feliz":
            if (personas.getEstaFeliz()) {
-               estaFeliz++;
+               
                System.out.print("Está Feliz, ");
                contador++;
            }
@@ -114,7 +105,7 @@ public class AdivinaQuien {
        
        int personaElegida = new Random().nextInt(10);
        
-       //Menú que permite realizar 3 preguntas
+   
        for (int contadorPreguntas = 0; contadorPreguntas < 5; contadorPreguntas++) {
            System.out.println("Elija una opción para descartar jugadores:");
            System.out.println("1. ¿Es bizco?");
@@ -193,14 +184,14 @@ public class AdivinaQuien {
                	    }
                	    break;
                	}
-        // Aquí es donde debemos actualizar el número de personas elegidas después de cada pregunta.
+        
            int numeroPersonasElegidas = 0;
            for (int i = 0; i < 10; i++) {
            if (persona[i] != null) {
            numeroPersonasElegidas++;
            }
            }
-           // Si después de la pregunta sólo queda una persona, podemos asumir que esa es la elegida y terminar el juego.
+           
            if (numeroPersonasElegidas == 1) {
            for (int i = 0; i < 10; i++) {
            if (persona[i] != null) {
@@ -222,7 +213,7 @@ public class AdivinaQuien {
        int eleccionUsuario = sc.nextInt();
        eleccionUsuario--;
 
-     //Comprobamos si la elección del usuario es correcta
+     
        if (persona[eleccionUsuario] != null) {
            System.out.println("¡Correcto! La persona elegida es " + persona[eleccionUsuario].getNombre());
        } else {
