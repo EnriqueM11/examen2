@@ -19,10 +19,6 @@ import java.util.Random;
 		protected static String nombre8;
 		protected static String nombre9;
 		
-		protected static boolean bizco;
-		protected static boolean pelon;
-		protected static boolean brazos;
-		protected static boolean fuerte;
 		
 		
 		private static final String[] nombres= { "Rodolfo", "Andrea", "Luis", "Karen", "Betty la fea", "David",
@@ -50,7 +46,7 @@ import java.util.Random;
 		public persona(String nombre, String nombre1, String nombre2, String nombre3, String nombre4, String nombre5
 				, String nombre6, String nombre7, String nombre8, String nombre9, String atributo, String atributo_2, String atributo_3, String atributo_4) {
 			
-			int rando_num = numrand.nextInt(atributos1.length);
+			int rando_num = numrand.nextInt(4);
 			int top;
 			top = rando_num;
 			atributo = atributos1[top];

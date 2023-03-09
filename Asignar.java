@@ -1,15 +1,12 @@
 package personas;
 
 public class Asignar extends persona{
-	
-	private static int stackSize;
-	private int nombres_1;
-	
-	
+		
 	
 	public Asignar () {
 		super (nombre, nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, nombre7, nombre8,nombre9,atributo,
 				atributo_2,atributo_3,atributo_4);
+		this.atributo=atributo;
 	}
 //nombres
 	public String get_name() {
@@ -44,6 +41,11 @@ public class Asignar extends persona{
 	public String get_name_10() {
 		return nombre9;
 	}
+	
+	public void set_atributo(String atributo) {
+		this.atributo = atributo;
+		}
+
 	
 	public String get_atributo () { 
     	return atributo; }
